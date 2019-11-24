@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Procureswift</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://res.cloudinary.com/tenderswift/image/upload/c_scale,h_32/v1564315094/ProcureSwiftLogos/procureswift-square.png"
+          rel="icon">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://res.cloudinary.com/tenderswift/image/upload/v1574635669/ProcureSwiftLogos/Procurewift-17.png" height="60" alt="">
+            </a>
+        </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

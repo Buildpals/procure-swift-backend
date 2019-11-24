@@ -1,0 +1,177 @@
+<header class="bg-primary pt-3 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-9 mx-auto">
+                <div class="text-light">
+                    <div class="h2 text-center">
+                        Purchase items from
+                    </div>
+                    <div class="h1 text-center mb-5">
+                        Amazon to Ghana
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <form method="POST" action="order/cost/">
+                            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                            <div class="form-group">
+                                <label for="url_field">What item do you want to purchase?</label>
+
+                                <input type="text"
+                                       class="form-control"
+                                       id="url_field"
+                                       name="order[amazon_url]"
+                                       required
+                                       placeholder="Enter Amazon URL">
+                            </div>
+                            <div class="form-group">
+                                <label for="quantity_field">How many do you want to buy?</label>
+
+                                <input type="number"
+                                       min="1"
+                                       required
+                                       name="order[quantity]"
+                                       class="form-control"
+                                       id="quantity_field"
+                                       placeholder="Enter Quantity">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="delivery_method">Delivery method</label>
+                                <select class="form-control" id="delivery_method" name="order[delivery_method]">
+                                    <option>Deliver by Sea</option>
+                                    <option>Deliver by Air</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="region">Region</label>
+                                <select class="form-control" id="region" name="region">
+                                    <option>Greater Accra Region</option>
+                                    <option>Ashanti Region</option>
+                                    <option>Central Region</option>
+                                    <option>Eastern Region</option>
+                                    <option>Oti Region</option>
+                                    <option>Bono East Region</option>
+                                    <option>Ahafo Region</option>
+                                    <option>Bono Region</option>
+                                    <option>North East Region</option>
+                                    <option>Savanna Region</option>
+                                    <option>Western Region</option>
+                                    <option>Western North Region</option>
+                                    <option>Volta Region</option>
+                                    <option>Northern Region</option>
+                                    <option>Upper East Region</option>
+                                    <option>Upper West Region</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-accent btn-block">Get Shipping Cost</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Icons Grid -->
+<section class="features-icons text-center py-5">
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex mb-3">
+                        <i class="fab fa-amazon fa-5x m-auto text-accent"></i>
+                    </div>
+                    <h3>Enter your Amazon link</h3>
+                    <p class="mb-0">Enter the Amazon link for the item you want to buy</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex mb-3">
+                        <i class="fas fa-hand-holding-usd fa-5x m-auto text-accent"></i>
+                    </div>
+                    <h3>Make payment</h3>
+                    <p class="mb-0">Pay via card or mobile money through ProcureSwift</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex mb-3">
+                        <i class="fas fa-truck fa-5x m-auto fa-fw text-accent"></i>
+                    </div>
+                    <h3>We purchase & deliver</h3>
+                    <p class="mb-0">ProcureSwift purchases the item and delivers it to you in Ghana</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials text-center bg-primary text-light py-5">
+    <div class="container">
+        <h2 class="mb-5">What people are saying...</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-circle mb-3 px-5" src="https://res.cloudinary.com/tenderswift/image/upload/v1574635669/ProcureSwiftLogos/1.jpg" alt="">
+                    <h5>Michael E.</h5>
+                    <p class="font-weight-light mb-0">
+                        "This is fantastic! Thanks so much guys!"
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-circle mb-3 px-5" src="https://res.cloudinary.com/tenderswift/image/upload/v1574635669/ProcureSwiftLogos/2.jpg" alt="">
+                    <h5>Fred S.</h5>
+                    <p class="font-weight-light mb-0">
+                        "Thanks so much for opening up the world to us!"
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-circle mb-3 px-5" src="https://res.cloudinary.com/tenderswift/image/upload/v1574635669/ProcureSwiftLogos/3.jpg" alt="">
+                    <h5>Sarah W.</h5>
+                    <p class="font-weight-light mb-0">
+                        "Procureswift is amazing. I've been using it to ship all our agric products."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                <p class="text-muted small mb-4 mb-lg-0">&copy; ProcureSwift 2019. All Rights Reserved.</p>
+            </div>
+            <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item mr-3">
+                        <a href="https://web.facebook.com/procureswift/">
+                            <i class="fab fa-facebook fa-2x fa-fw text-accent"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/procureswift/">
+                            <i class="fab fa-instagram fa-2x fa-fw text-accent"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
